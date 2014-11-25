@@ -1,4 +1,5 @@
 require 'spree_core'
+require "spree/core/search/base"
 module SpreeLikeAllSearcher
     class Base < defined?(Spree::Core::Search::MultiDomain) ? Spree::Core::Search::MultiDomain :  Spree::Core::Search::Base
     attr_accessor :properties
