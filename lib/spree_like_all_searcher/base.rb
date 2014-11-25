@@ -6,7 +6,9 @@ module SpreeLikeAllSearcher
 
       # method should return new scope based on base_scope
       def get_products_conditions_for(base_scope, query)
-        base_scope.like_all([:name, :description, :sku], query.split)
+          if query
+            base_scope.like_all([:name, :description, :sku], query.split)
+          end
       end
 
   end
